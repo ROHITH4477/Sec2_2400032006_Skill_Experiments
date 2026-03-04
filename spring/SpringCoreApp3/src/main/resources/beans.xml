@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+   <!-- enable annotation based configuration -->
+   <context:annotation-config />
+   
+   <!-- configure dependent class Car -->
+   <bean id="c" class="com.klu.beans.Car"></bean>
+   
+   <!-- configure dependency class Engine -->
+   <bean id="e" class="com.klu.beans.Engine"></bean>
+   
+   <!-- configure Product bean -->
+   <bean id="p" class="com.klu.beans.Product">
+     <constructor-arg name="pid" value="1001"></constructor-arg>
+     <constructor-arg name="pname" value="Apples"></constructor-arg>
+     <constructor-arg name="price" value="10000"></constructor-arg>
+   </bean>
+   
+   <!-- configure customer bean -->
+   <bean id="cust" class="com.klu.beans.Customer">
+     <property name="cid" value="1002"></property>
+     <property name="cname" value="Rajesh"></property>
+   </bean>
+   
+</beans>

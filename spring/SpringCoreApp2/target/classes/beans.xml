@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- dependent bean-->
+	<bean id="emp" class="com.klu.beans.Employee">
+	    <constructor-arg name="eid" value="4477"></constructor-arg>
+	    <constructor-arg name="ename" value="Rohith"></constructor-arg>
+	    <constructor-arg name="desig" value="CEO"></constructor-arg>
+	    <constructor-arg name="sal" value="500000"></constructor-arg>
+	    <constructor-arg name="dept" ref="dept"></constructor-arg>
+	    
+	    
+	
+	</bean>
+	
+	<!-- dependency bean-->
+	<bean id="dept" class="com.klu.beans.Department">
+	    <constructor-arg name="deptId" value="CSE101"></constructor-arg>
+	    <constructor-arg name="deptName" value="Computer Science"></constructor-arg>
+	    
+	
+	</bean>
+
+
+</beans>
