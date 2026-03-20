@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Dependency Bean : Course -->
+    <bean id="course" class="com.klu.beans.Course">
+        <property name="cid" value="24SDCS02E"/>
+        <property name="cname" value="Full Stack Development"/>
+    </bean>
+
+    <!-- Dependency Bean : Address -->
+    <bean id="address" class="com.klu.beans.Address">
+        <property name="street" value="Weavers Colony"/>
+        <property name="city" value="Mangalagiri"/>
+        <property name="state" value="Andhra Pradesh"/>
+    </bean>
+
+    <!-- Dependent Bean : Student -->
+    <bean id="stud" class="com.klu.beans.Student">
+        <property name="sid" value="1001"/>
+        <property name="sname" value="Rohith"/>
+        <property name="course" ref="course"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+</beans>
