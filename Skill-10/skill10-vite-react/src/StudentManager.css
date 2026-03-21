@@ -1,0 +1,8 @@
+
+.container { text-align: center; padding: 20px; }
+.form input { margin: 5px; padding: 8px; }
+button { padding: 8px 12px; margin: 5px; cursor: pointer; }
+.delete { background-color: red; color: white; }
+table { margin: 20px auto; border-collapse: collapse; width: 60%; }
+table, th, td { border: 1px solid black; }
+th, td { padding: 10px; }
